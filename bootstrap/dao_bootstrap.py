@@ -32,7 +32,7 @@ print(f"Published jpeg 1 with data_NFT.address={data_NFT_1.address}")
 exchange_1 = Datatoken_1.create_exchange(to_wei(asset_1_price), asset_1_token.address, {"from": dao_treasury.address})
 
 # make datatokens_1 available on exchange_1
-Datatoken_1.min(dao_treasury.address, to_wei(asset_1_num_tokens), {"from": dao_treasury.address})
+Datatoken_1.mint(dao_treasury.address, to_wei(asset_1_num_tokens), {"from": dao_treasury.address})
 Datatoken_1.approve(exchange_1.address, to_wei(asset_1_num_tokens), {"from": dao_treasury.address})
 Datatoken_1.fre(reward_add=dao_treasury.address)
 
@@ -44,7 +44,7 @@ print(f"Published jpeg 2 with data_NFT.address={data_NFT_2.address}")
 exchange_2 = Datatoken_2.create_exchange(to_wei(asset_2_price), asset_2_token.address, {"from": dao_treasury.address})
 
 # make datatokens_2 available on exchange_2
-Datatoken_2.min(dao_treasury.address, to_wei(asset_2_num_tokens), {"from": dao_treasury.address})
+Datatoken_2.mint(dao_treasury.address, to_wei(asset_2_num_tokens), {"from": dao_treasury.address})
 Datatoken_2.approve(exchange_2.address, to_wei(asset_2_num_tokens), {"from": dao_treasury.address})
 Datatoken_2.fre(reward_add=dao_treasury.address)
 
